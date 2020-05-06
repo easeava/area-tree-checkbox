@@ -1,0 +1,85 @@
+.area-part {
+  width: 100%;
+}
+
+.region-part {
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 12px;
+
+  > .ant-checkbox-wrapper {
+    flex-basis: 15%;
+  }
+
+  .region-part_province {
+    flex-basis: 85%;
+
+    > .ant-checkbox-wrapper {
+      margin-bottom: 10px;
+    }
+
+    > .ant-checkbox-wrapper {
+      width: 32%;
+    }
+  }
+
+}
+
+.region-part_city, .region-part_county, .region-part_province {
+  .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+    margin-left: 0;
+  }
+}
+
+.region-part, .region-part_city, .region-part_county {
+
+  .anticon {
+    margin-left: 6px;
+  }
+}
+
+.region-part_city, .region-part_county {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start;
+  height: auto;
+  max-height: 330px;
+  overflow-y: auto;
+}
+
+.region-part_county {
+  white-space: nowrap;
+}
+
+.area-modal {
+  .ant-modal-header {
+    padding: 10px 14px;
+  }
+
+  .ant-modal-close-x {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+  }
+
+  .ant-modal-body {
+    padding: 14px 14px 0;
+  }
+}
+
+.area-modal_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+$__ant-checkbox: 'ant-checkbox';
+
+.#{$__ant-checkbox}-wrapper:hover .#{$__ant-checkbox}-inner,
+  .#{$__ant-checkbox}:hover .#{$__ant-checkbox}-inner,
+  .#{$__ant-checkbox}-input:focus + .#{$__ant-checkbox}-inner {
+    border-color: #d9d9d9;
+  }
