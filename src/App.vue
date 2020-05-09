@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
-    <tree :treeData="data" />
+  <div id="app" @check="onCheck">
+    <tree :treeData="data" v-model="checkedList" @check="onCheck" />
+    {{checkedList}}
   </div>
 </template>
 
@@ -13,7 +14,14 @@ export default {
 
   data () {
     return {
-      data
+      data,
+      checkedList: []
+    }
+  },
+
+  methods: {
+    onCheck () {
+      console.log('check')
     }
   },
 

@@ -1,0 +1,30 @@
+.c-tree {
+
+  &-section, &-node {
+    display: flex;
+  }
+
+  &-part {
+    flex-basis: 15%;
+  }
+
+  &-province {
+    flex-basis: 85%;
+
+    > .ant-checkbox-wrapper {
+      width: 32%;
+    }
+  }
+
+  &-node {
+    flex-direction: column;
+    white-space: nowrap;
+    height: auto;
+    max-height: 330px;
+    overflow-y: auto;
+  }
+
+  .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+    margin-left: 0;
+  }
+}

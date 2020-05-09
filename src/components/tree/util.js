@@ -73,6 +73,14 @@ export const mapChildren = (children = [], callback) => {
   return list
 }
 
+/**
+ * 获取选中及上级半选机和
+ *
+ * @param {*} keyList
+ * @param {*} isCheck
+ * @param {*} keyEntities
+ * @param {*} checkStatus
+ */
 export const conductCheck = (keyList, isCheck, keyEntities, checkStatus = {}) => {
   const checkedKeys = new Map()
   const halfCheckedKeys = new Map(); // Record the key has some child checked (include child half checked)
